@@ -38,14 +38,18 @@ def component_is_part_application(component=None, application=None):
     print component
     print application
 
+    if component:
+        if application:
+            rel = Relationship(component, "IS_PART", application)
+            graph.create(rel)
+            return "Relationship created"
+        else:
+            return 'Relationship not found'
 
-    rel = Relationship(component, "IS_PART", application)
-    graph.create(rel)
+    else:
+        return "Component not found"
 
-    return 'creating Relationship'
-
-
-
+    return "Impossible is nothing"
 
 
 

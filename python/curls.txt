@@ -5,4 +5,4 @@ curl -d '[{"name": "dotMarks"}]' -H 'Content-Type: application/json'  http://127
 
 curl -d '[{"name": "MongoDB"}]' -H 'Content-Type: application/json'  http://127.0.0.1:5000/components
 
-curl -d '[{"component": "552f9f024374720017a37c4f", "application": "552f9eef4374720017a37c4e"}]' -H 'Content-Type: application/json'  http://127.0.0.1:5000/components
+curl -d '{"component": "552fb8d5e947210007980b7a", "application": "552fb8cde947210007980b79"}' -H 'Content-Type: application/json'  http://127.0.0.1:5000/ispart
