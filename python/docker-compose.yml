@@ -1,0 +1,18 @@
+plano:
+  build: .
+  command: python run.py
+  ports:
+   - "5000:5000"
+  volumes:
+   - .:/app
+  links:
+   - neo4j
+   - mongodb
+
+neo4j:
+  image: tpires/neo4j
+  ports:
+  - "7474:7474"
+
+mongodb:
+    image: mongo
