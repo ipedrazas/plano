@@ -1,3 +1,16 @@
+mongodb:
+    image: mongo
+    volumes:
+    - /data/plano/mongodb:/data/db
+
+
+neo4j:
+  image: tpires/neo4j
+  ports:
+  - "7474:7474"
+  volumes:
+  - /data/plano/neo4j:/var/lib/neo4j/data/
+
 plano:
   build: .
   command: python run.py
@@ -8,11 +21,3 @@ plano:
   links:
    - neo4j
    - mongodb
-
-neo4j:
-  image: tpires/neo4j
-  ports:
-  - "7474:7474"
-
-mongodb:
-    image: mongo
