@@ -1,8 +1,40 @@
 
 
 curl -d '[{"name": "dotMarks"}]' -H 'Content-Type: application/json'  http://127.0.0.1:5000/applications
+curl -d '[{"name": "Checkpoint"}]' -H 'Content-Type: application/json'  http://127.0.0.1:5000/applications
+curl -d '[{"name": "Plano.io"}]' -H 'Content-Type: application/json'  http://127.0.0.1:5000/applications
 
 
+curl -d '[{"name": "Neo4j"}]' -H 'Content-Type: application/json'  http://127.0.0.1:5000/components
 curl -d '[{"name": "MongoDB"}]' -H 'Content-Type: application/json'  http://127.0.0.1:5000/components
+curl -d '[{"name": "Redis"}]' -H 'Content-Type: application/json'  http://127.0.0.1:5000/components
+curl -d '[{"name": "dotMarks API"}]' -H 'Content-Type: application/json'  http://127.0.0.1:5000/components
+curl -d '[{"name": "dotMarks Celery"}]' -H 'Content-Type: application/json'  http://127.0.0.1:5000/components
 
-curl -d '{"component": "552fb8d5e947210007980b7a", "application": "552fb8cde947210007980b79"}' -H 'Content-Type: application/json'  http://127.0.0.1:5000/ispart
+curl -d '[{"name": "PostgreSQL"}]' -H 'Content-Type: application/json'  http://127.0.0.1:5000/components
+curl -d '[{"name": "Checkpoint API"}]' -H 'Content-Type: application/json'  http://127.0.0.1:5000/components
+curl -d '[{"name": "Checkpoint UI"}]' -H 'Content-Type: application/json'  http://127.0.0.1:5000/components
+
+curl -d '[{"name": "AWS"}]' -H 'Content-Type: application/json'  http://127.0.0.1:5000/components
+curl -d '[{"name": "Chef"}]' -H 'Content-Type: application/json'  http://127.0.0.1:5000/components
+
+curl -d '[{"name": "Plano.io API"}]' -H 'Content-Type: application/json'  http://127.0.0.1:5000/components
+curl -d '[{"name": "Plano.io UI"}]' -H 'Content-Type: application/json'  http://127.0.0.1:5000/components
+
+
+curl -d '{"source": "55311c23baf35c00119cbcd5", "target": "55311bdcbaf35c00119cbcd3"}' -H 'Content-Type: application/json'  http://127.0.0.1:5000/rel/ispart
+curl -d '{"source": "55311bd6baf35c00119cbcd2", "target": "55311bdcbaf35c00119cbcd3"}' -H 'Content-Type: application/json'  http://127.0.0.1:5000/rel/ispart
+curl -d '{"source": "55311c23baf35c00119cbcd4", "target": "55311bdcbaf35c00119cbcd3"}' -H 'Content-Type: application/json'  http://127.0.0.1:5000/rel/ispart
+curl -d '{"source": "553092a9a2d42500077d335f", "target": "55311bdcbaf35c00119cbcd3"}' -H 'Content-Type: application/json'  http://127.0.0.1:5000/rel/ispart
+
+
+curl -d '{"source": "552fc785da1b59001b4ceb97", "target": "552fc784da1b59001b4ceb95"}' -H 'Content-Type: application/json'  http://127.0.0.1:5000/rel/connects
+curl -d '{"source": "552fc785da1b59001b4ceb96", "target": "552fc784da1b59001b4ceb95"}' -H 'Content-Type: application/json'  http://127.0.0.1:5000/rel/connects
+curl -d '{"source": "552fc785da1b59001b4ceb96", "target": "552fc784da1b59001b4ceb94"}' -H 'Content-Type: application/json'  http://127.0.0.1:5000/rel/connects
+
+
+curl -d '{"source": "552fcb88da1b59001f751037", "target": "552fcb88da1b59001f751036"}' -H 'Content-Type: application/json'  http://127.0.0.1:5000/rel/connects
+curl -d '{"source": "552fcb88da1b59001f751036", "target": "552fcb54da1b59001f751035"}' -H 'Content-Type: application/json'  http://127.0.0.1:5000/rel/connects
+curl -d '{"source": "552fcb88da1b59001f751036", "target": "552fcb88da1b59001f751038"}' -H 'Content-Type: application/json'  http://127.0.0.1:5000/rel/connects
+curl -d '{"source": "552fcb88da1b59001f751038", "target": "552fcb88da1b59001f751039"}' -H 'Content-Type: application/json'  http://127.0.0.1:5000/rel/connects
+

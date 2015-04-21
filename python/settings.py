@@ -14,11 +14,13 @@ X_HEADERS = "Content-Type, Accept, Authorization, X-Requested-With, " \
     " Access-Control-Allow-Credentials, X-HTTP-Method-Override, mozSystem, " \
     " Access-Control-Allow-Methods, If-Match "
 
+UPLOAD_FOLDER = '/app/uploads'
 
 applications = {
     'schema': {
         'name': {
-            'type': 'string'
+            'type': 'string',
+            'unique': True
         }
     }
 }
@@ -26,7 +28,8 @@ applications = {
 components = {
     'schema': {
         'name': {
-            'type': 'string'
+            'type': 'string',
+            'unique': True
         }
     }
 }
@@ -34,7 +37,8 @@ components = {
 runtimes = {
     'schema': {
         'name': {
-            'type': 'string'
+            'type': 'string',
+            'unique': True
         }
     }
 }

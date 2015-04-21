@@ -13,3 +13,5 @@ simplejson==3.6.5
 virtualenv==1.11.6
 wsgiref==0.1.2
 flask-cors
+PyYAML
+pymongo
