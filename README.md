@@ -27,3 +27,9 @@ docker run -it --link python_mongodb_1:mongo --rm mongo sh -c 'exec mongo "$MONG
 The API allows to define entities like Application, Components and Runtimes and create relationships between them.
 
 You can access the [Neo4j browser](https://localhost:7474) to see the different results.
+
+Plano allows you to define your architecture. You can upload `docker-compose` yaml files and it will map the application.
+
+### TODO:
+
+* support for AWS Cloudformation
