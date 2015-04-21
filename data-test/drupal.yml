@@ -1,0 +1,26 @@
+mysql:
+  image: mysql:latest
+  expose:
+    - "3306"
+  ports:
+    - "3307:3306"
+  environment:
+    MYSQL_DATABASE: database
+    MYSQL_USER: root
+    MYSQL_PASSWORD: admin123
+    MYSQL_ROOT_PASSWORD: admin123
+
+drupal:
+  image: iiiepe/nginx-drupal6
+  volumes:
+    - application:/var/www
+    - logs:/var/log/supervisor
+    - files:/var/www/sites/default/files
+  ports:
+    - "80:80"
+  links:
+    - mysql:mysql
+  environment:
+    BASE_URL: http://local.iiiepe.net
+    DRUPAL_ENVIRONMENT: development
+
